@@ -65,8 +65,7 @@ static int xmp_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
     newName = strcat(de->d_name, ".ditandai");
 	if(dir){
 	snprintf(filename,sizeof(filename),"/home/magda/SoalShift_Modul4/rahasia/%s",newName);}
-	chmod(filename,NULL);
-	fileopen=(filename, "w");
+	chmod(filename, );
     struct stat st;
     memset(&st, 0, sizeof(st));
     st.st_ino = de->d_ino;
