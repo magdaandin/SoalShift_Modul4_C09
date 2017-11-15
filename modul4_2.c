@@ -58,14 +58,14 @@ static int xmp_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
   while ((de = readdir(dp)) != NULL) {
     char *newName;
 	FILE*fileopen;
-	char fileopen[100];
+	char filename[100];
 	DIR *dir = operdir("rahasia");
 	if(strstr(de->d_name,".txt")!=NULL||strstr(de->d_name,".doc")!=NULL||strstr(de->d_name,".pdf")!=NULL)
 {
     newName = strcat(de->d_name, ".ditandai");
 	if(dir){
 	snprintf(filename,sizeof(filename),"/home/magda/SoalShift_Modul4/rahasia/%s",newName);}
-	//fileopen= fopen(filename,"w");
+	chmod(filename, );
     struct stat st;
     memset(&st, 0, sizeof(st));
     st.st_ino = de->d_ino;
