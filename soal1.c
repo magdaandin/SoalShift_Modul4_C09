@@ -57,7 +57,7 @@ static int xmp_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
 
   while ((de = readdir(dp)) != NULL) {
 char *newName;
-	if(strstr(de->d_name,".pdf")!=NULL||strstr(de->d_name,".doc")!=NULL){
+	if(strstr(de->d_name,".pdf")!=NULL||strstr(de->d_name,".doc")!=NULL||strstr(de->d_name,".txt")!=NULL){
     newName = strcat(de->d_name, ".ditand");}
 	else newName = de->d_name;
     struct stat st;
